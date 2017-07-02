@@ -1,0 +1,52 @@
+Name : Nikita KUnchanwar
+Email id: nkunchan@uncc.edu
+
+
+#######Assignment2  Readme file######
+
+#####java files#####
+1. DocWordCount.java
+2. TermFrequency.java
+3. TFIDF.java
+4. Search.java
+5. Rank.java 
+
+
+Execution Instructions:
+
+** Steps to run DocWordCount.java, TermFrequency.java and TFIDF.java
+
+1. Compile and execute .java files with input folder path where input files are stored as 1st argument to and output folder path whether output needs to be stored as 2nd argument
+
+** Steps to execute Search.java
+
+1. Compile Search.java
+2. Create jar file using below command
+
+jar -cvf Rank.java -C build/ .
+
+3. Execute below command with output of TFIDF.java as input (1st argument) followed by output path where output needs to be stored as second argument followed by search queries with space as delimiter as further arguments
+
+hadoop jar Search.java org.myorg.Search /user/cloudera/TFIDF/output /user/cloudera/Search/output <Search Term1> <Search Term2> ........ <Search Termn>
+
+*** Steps to execute Rank.java
+
+1. Compile Rank.java
+2. Create jar file using below command:
+
+jar -cvf Rank.java -C build/ .
+
+3. Execute below command with output of Search.java as input(1st argument) followed by output path where output needs to be stored.
+
+hadoop jar Rank.java org.myorg.Rank /user/cloudera/Search/output /user/cloudera/Rank/output
+
+
+
+#####output files#####
+1. DocWordCount.out
+2. TermFrequency.out
+3. TFIDF.out
+4. Search.out
+5. Rank.out
+
+
